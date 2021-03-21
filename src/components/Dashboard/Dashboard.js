@@ -8,6 +8,7 @@ import { TrackSearchResult, Player } from "../";
 import axios from "axios";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../../theme";
+import { GlobalStyles } from "../../global";
 
 const spotifyApi = new SpotifyWebApi({
   clientId,
@@ -78,6 +79,7 @@ export default function Dashboard({ code }) {
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <GlobalStyles />
       <Container
         className="d-flex flex-column py-2"
         style={{ height: "100vh" }}

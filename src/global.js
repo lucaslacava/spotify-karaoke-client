@@ -10,10 +10,15 @@ export const GlobalStyles = createGlobalStyle`
   #root {
     height: 100vh;
   }
+  html { 
+    background: url('https://media.giphy.com/media/ku5EcFe4PNGWA/giphy.gif') no-repeat center center fixed; 
+    background-size: cover;
+  }
 
   body {
     align-items: center;
     background: ${({ theme }) => theme.body};
+    /* background: url('http://gph.is/1qtYHrM'); */
     color: ${({ theme }) => theme.text};
     display: flex;
     flex-direction: column;
