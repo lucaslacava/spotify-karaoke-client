@@ -77,10 +77,7 @@ export default function Dashboard({ code, theme, search, setSearch }) {
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
-      <Container
-        className="d-flex flex-column py-2"
-        style={{ height: "100vh" }}
-      >
+      <Container className="d-flex flex-column py-2" style={{ height: "90vh" }}>
         <div className="flex-grow-1 my-2" style={{ overflowY: "auto" }}>
           {searchResults.map((track) => (
             <TrackSearchResult
