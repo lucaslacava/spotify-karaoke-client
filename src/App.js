@@ -23,6 +23,7 @@ function App() {
           width: "100vw",
           justifyContent: "space-between",
           marginTop: 16,
+          marginBottom: 16,
         }}
       >
         {code ? (
@@ -38,13 +39,15 @@ function App() {
         )}
         <Toggle theme={theme} toggleTheme={toggleTheme} />
       </header>
-      {code && (
+      {code ? (
         <Dashboard
           code={code}
           theme={theme}
           search={search}
           setSearch={setSearch}
         />
+      ) : (
+        <div id="loginBg" />
       )}
     </ThemeProvider>
   );
