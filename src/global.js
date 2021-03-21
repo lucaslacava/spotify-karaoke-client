@@ -7,6 +7,10 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  #root {
+    height: 100vh;
+  }
+
   body {
     align-items: center;
     background: ${({ theme }) => theme.body};

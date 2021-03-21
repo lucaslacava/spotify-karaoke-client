@@ -15,18 +15,10 @@ function App() {
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
-      <div style={{ marginTop: 280 }}>
+      <header className="d-flex justify-content-center align-items-center">
         <Toggle theme={theme} toggleTheme={toggleTheme} />
-      </div>
-      {code ? (
-        <Dashboard
-          code={code}
-          theme={theme === "light" ? lightTheme : darkTheme}
-        />
-      ) : (
-        <Login />
-      )}
-      ;<footer> testando</footer>
+      </header>
+      {code ? <Dashboard code={code} /> : <Login />}
     </ThemeProvider>
   );
 }
