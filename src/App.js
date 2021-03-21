@@ -19,9 +19,10 @@ function App() {
         className="d-flex container"
         style={{ width: "100vw", justifyContent: "flex-end", marginTop: 16 }}
       >
-        {code ? <Dashboard code={code} /> : <Login />}
+        {<Login isLogged={code ? true : false} />}
         <Toggle theme={theme} toggleTheme={toggleTheme} />
       </header>
+      {code && <Dashboard code={code} />}
     </ThemeProvider>
   );
 }
