@@ -20,7 +20,7 @@ export default function Dashboard({ code }) {
   const [searchResults, setSearchResults] = useState([]);
   const [playingTrack, setPlayingTrack] = useState();
   const [lyrics, setLyrics] = useState("");
-  const [theme, toggleTheme] = useDarkMode();
+  const [theme] = useDarkMode();
 
   const chooseTrack = (track) => {
     setPlayingTrack(track);
