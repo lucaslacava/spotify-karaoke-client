@@ -20,6 +20,9 @@ export default function Player({ accesToken, trackUri, bgColor, fontColor }) {
       styles={{
         bgColor: bgColor,
         color: fontColor,
+        trackNameColor: fontColor,
+        trackArtistColor: fontColor,
+        sliderColor: "#800080",
       }}
     />
   );
