@@ -47,7 +47,7 @@ function App() {
           setSearch={setSearch}
         />
       ) : (
-        <div id="loginBg" />
+        <div id="loginBg" style={{ marginTop: "-80px" }} />
       )}
     </ThemeProvider>
   );

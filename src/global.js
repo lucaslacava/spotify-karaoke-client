@@ -32,7 +32,6 @@ export const GlobalStyles = createGlobalStyle`
   #loginBg{
     width: 100vw;
     height: 100%;
-    margin-top:-80px;
     align-items: center;
     background: url('${({ theme }) => theme.gifUrl}') no-repeat fixed;
     background-size: cover;
