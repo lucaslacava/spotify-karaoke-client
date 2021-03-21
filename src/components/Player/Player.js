@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SpotifyPlayer from "react-spotify-web-playback";
-export default function Player({ accesToken, trackUri }) {
+export default function Player({ accesToken, trackUri, bgColor, fontColor }) {
   const [play, setPlay] = useState(false);
   useEffect(() => {
     setPlay(true);
@@ -17,6 +17,10 @@ export default function Player({ accesToken, trackUri }) {
         if (!state.isPlaying) setPlay(false);
       }}
       play={play}
+      styles={{
+        bgColor: bgColor,
+        color: fontColor,
+      }}
     />
   );
 }

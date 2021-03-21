@@ -93,7 +93,12 @@ export default function Dashboard({ code, theme, search, setSearch }) {
           )}
         </div>
         <div>
-          <Player accesToken={accessToken} trackUri={playingTrack?.uri} />
+          <Player
+            accesToken={accessToken}
+            trackUri={playingTrack?.uri}
+            bgColor={theme === "light" ? lightTheme.body : darkTheme.body}
+            fontColor={theme === "light" ? lightTheme.text : darkTheme.text}
+          />
         </div>
       </Container>
     </ThemeProvider>
