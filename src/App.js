@@ -37,7 +37,14 @@ function App() {
         )}
         <Toggle theme={theme} toggleTheme={toggleTheme} />
       </header>
-      {code && <Dashboard code={code} theme={theme} />}
+      {code && (
+        <Dashboard
+          code={code}
+          theme={theme}
+          search={search}
+          setSearch={setSearch}
+        />
+      )}
     </ThemeProvider>
   );
 }
