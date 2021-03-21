@@ -8,7 +8,7 @@ export default function Login({ isLogged }) {
   return (
     <Container className="align-items-center">
       <a className="btn btn-success btn-lg" href={AUTH_URL}>
-        {isLogged ? "Get out" : "Login With Spotify"}
+        {isLogged ? "Get me out" : "Login With Spotify"}
       </a>
     </Container>
   );

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import useAuth from "../../hooks/useAuth";
-import { useDarkMode } from "../../hooks/useDarkMode";
 import { Container, Form } from "react-bootstrap";
 import SpotifyWebApi from "spotify-web-api-node";
 import { clientId } from "../Login/Login";
@@ -14,14 +13,13 @@ const spotifyApi = new SpotifyWebApi({
   clientId,
 });
 
-export default function Dashboard({ code }) {
+export default function Dashboard({ code, theme }) {
   const accessToken = useAuth(code);
 
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [playingTrack, setPlayingTrack] = useState();
   const [lyrics, setLyrics] = useState("");
-  const [theme] = useDarkMode();
 
   const chooseTrack = (track) => {
     setPlayingTrack(track);

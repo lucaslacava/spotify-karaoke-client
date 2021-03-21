@@ -22,7 +22,7 @@ function App() {
         {<Login isLogged={code ? true : false} />}
         <Toggle theme={theme} toggleTheme={toggleTheme} />
       </header>
-      {code && <Dashboard code={code} />}
+      {code && <Dashboard code={code} theme={theme} />}
     </ThemeProvider>
   );
 }
