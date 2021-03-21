@@ -18,7 +18,15 @@ function App() {
       <div style={{ marginTop: 280 }}>
         <Toggle theme={theme} toggleTheme={toggleTheme} />
       </div>
-      {code ? <Dashboard code={code} /> : <Login />};<footer> testando</footer>
+      {code ? (
+        <Dashboard
+          code={code}
+          theme={theme === "light" ? lightTheme : darkTheme}
+        />
+      ) : (
+        <Login />
+      )}
+      ;<footer> testando</footer>
     </ThemeProvider>
   );
 }
