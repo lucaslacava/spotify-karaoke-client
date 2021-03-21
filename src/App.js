@@ -1,11 +1,26 @@
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "./theme";
+import { GlobalStyles } from "./global";
+import { useDarkMode } from "./hooks/useDarkMode";
 
-import { Login, Dashboard } from "./components";
+import { Login, Dashboard, Toggle } from "./components";
 
 const code = new URLSearchParams(window.location.search).get("code");
 
 function App() {
-  return code ? <Dashboard code={code} /> : <Login />;
+  const [theme, toggleTheme] = useDarkMode();
+
+  return (
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <GlobalStyles />
+      <div style={{ marginTop: 280 }}>
+        <Toggle theme={theme} toggleTheme={toggleTheme} />
+      </div>
+      {code ? <Dashboard code={code} /> : <Login />};<footer> testando</footer>
+    </ThemeProvider>
+  );
 }
 
 export default App;
