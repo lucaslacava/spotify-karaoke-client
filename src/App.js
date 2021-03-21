@@ -25,15 +25,16 @@ function App() {
           marginTop: 16,
         }}
       >
-        {<Login isLogged={code ? true : false} />}
-        {code && (
+        {code ? (
           <Form.Control
             type="search"
-            style={{ width: "60%" }}
+            style={{ width: "80%", height: 48 }}
             placeholder="Search songs and artists"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
+        ) : (
+          <Login />
         )}
         <Toggle theme={theme} toggleTheme={toggleTheme} />
       </header>
